@@ -1,0 +1,18 @@
+.wrap {
+    display: flex;
+flex-wrap: wrap;
+    column-gap: 5px;
+}
+
+p {
+    text-align: justify;
+}
+
+.post-card {
+    box-sizing: border-box;
+    width: 18%;
+    background-color: #e8f8d7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}

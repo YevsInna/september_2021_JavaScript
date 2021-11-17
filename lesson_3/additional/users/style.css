@@ -1,0 +1,17 @@
+.users-box{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+}
+.user-block{
+    box-sizing: border-box;
+    width: 45%;
+    background-color: #2b5b5a;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 20px;
+}
