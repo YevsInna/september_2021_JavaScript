@@ -60,10 +60,13 @@
 
 
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
-// let arr = [100,250,50,168,120,345,188];
-// let sum = arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]+arr[6];
-// let avg = sum/arr.length;
-// console.log(avg);
+let arr = [100,250,50,168,120,345,188];
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  };
+let avg = sum/arr.length;
+console.log(avg);
 
 
 
