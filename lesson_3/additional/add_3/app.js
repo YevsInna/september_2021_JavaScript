@@ -129,11 +129,23 @@ let usersWithCities = [];
 for (const user of usersWithId) {
     for (const city of citiesWithId) {
       if (user.id === city.user_id){
-          user.address = city;
+          usersWithCities.push(
+              {id: user.id,
+               name: user.name,
+               age: user.age,
+               status: user.status,
+               address: {
+                   user_id: city.user_id,
+                   country: city.country,
+                   city: city.city
+
+               }}
+          );
+
       };
     };
 };
-usersWithCities = usersWithId;
+
 console.log(usersWithCities);
 
 
@@ -163,25 +175,25 @@ console.log(usersWithCities);
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
-
-let abc = ['a','b','c'];
-let string = '';
-for (let i = 0; i < abc.length; i++) {
-    string += abc[i];
-
-    };
-console.log(string);
-
-let string2 = '';
-let i =0;
-while (i<abc.length){
-    string2 += abc[i];
-    i++;
-};
-console.log(string2)
-
-let string3 = '';
-for (const item of abc) {
-    string3 += item;
-};
-console.log(string3);
+//
+// let abc = ['a','b','c'];
+// let string = '';
+// for (let i = 0; i < abc.length; i++) {
+//     string += abc[i];
+//
+//     };
+// console.log(string);
+//
+// let string2 = '';
+// let i =0;
+// while (i<abc.length){
+//     string2 += abc[i];
+//     i++;
+// };
+// console.log(string2)
+//
+// let string3 = '';
+// for (const item of abc) {
+//     string3 += item;
+// };
+// console.log(string3);
