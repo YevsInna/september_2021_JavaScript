@@ -4,15 +4,14 @@
 //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
 // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
 
-// let arr = [];
-//
-// let x = 0;
-// for (let i =0; i<50; i++){
-//    arr[i]=x;
-//    x+=2;
-//     console.log(arr[i]);
-//     };
-
+let arr = [];
+let x = 0;
+for (let i =0; i<100; i++){
+      if ([i]%2===0){
+        arr.push([i])
+    }
+};
+console.log(arr);
 // let y = 1;
 // for (let i =0; i<50; i++){
 //     arr[i]=y;
@@ -60,13 +59,13 @@
 
 
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
-let arr = [100,250,50,168,120,345,188];
-let sum = 0;
-for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  };
-let avg = sum/arr.length;
-console.log(avg);
+// let arr = [100,250,50,168,120,345,188];
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   };
+// let avg = sum/arr.length;
+// console.log(avg);
 
 
 
