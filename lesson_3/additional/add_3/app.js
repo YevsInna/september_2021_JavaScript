@@ -4,7 +4,7 @@
 //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
 // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
 
-let arr = [];
+// let arr = [];
 //
 // let x = 0;
 // for (let i =0; i<50; i++){
@@ -20,10 +20,10 @@ let arr = [];
 //     console.log(arr[i]);
 // };
 
-for (let i = 0; i < 20; i++) {
-    arr[i]= Math.round(Math.random()*100);
-    }
-console.log(arr);
+// for (let i = 0; i < 20; i++) {
+//     arr[i]= Math.round(Math.random()*100);
+//     }
+// console.log(arr);
 
 
 // 2. Вивести за допомогою console.log кожен третій елемен
@@ -41,13 +41,13 @@ console.log(arr);
 
 
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
-let newArr = [];
-for (let i = 0; i < arr.length; i+=2) {
-    if (arr[i]%2===0){
-        newArr.push(arr[i]);
-    };
-};
-console.log(newArr);
+// let newArr = [];
+// for (let i = 0; i < arr.length; i+=2) {
+//     if (arr[i]%2===0){
+//         newArr.push(arr[i]);
+//     };
+// };
+// console.log(newArr);
 
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
@@ -125,9 +125,16 @@ console.log(newArr);
 //                 city: 'Ternopil'
 //             }
 //         },
-// ??????????????????????????????????????????
-
-
+let usersWithCities = [];
+for (const user of usersWithId) {
+    for (const city of citiesWithId) {
+      if (user.id === city.user_id){
+          user.address = city;
+      };
+    };
+};
+usersWithCities = usersWithId;
+console.log(usersWithCities);
 
 
 
@@ -157,18 +164,24 @@ console.log(newArr);
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
 
-// let abc = ['a','b','c'];
-//
-// for (let i = 0; i < abc.length; i++) {
-//     console.log(abc[0]+abc[1]+abc[2]);
-//     };
-//
-// let i =0;
-// while (i<abc.length){
-//     console.log(abc[0]+abc[1]+abc[2]);
-//     i++;
-// };
-//
-// for (const item of abc) {
-//     console.log(abc[0]+abc[1]+abc[2]);
-// }
+let abc = ['a','b','c'];
+let string = '';
+for (let i = 0; i < abc.length; i++) {
+    string += abc[i];
+
+    };
+console.log(string);
+
+let string2 = '';
+let i =0;
+while (i<abc.length){
+    string2 += abc[i];
+    i++;
+};
+console.log(string2)
+
+let string3 = '';
+for (const item of abc) {
+    string3 += item;
+};
+console.log(string3);

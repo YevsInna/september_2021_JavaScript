@@ -75,10 +75,10 @@ createListOfArray(arr);
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
 // Для кожного об'єкту окремий блок.
-function writeObject([]){
-    for (const object of objects) {
+function writeObject(arr){
+    for (const a of arr) {
         document.write(`
-        <div>${object.id}. name - ${object.name}, age: ${object.age} </div>
+        <div>${a.id}. name - ${a.name}, age: ${a.age} </div>
         `);
     };
 };
