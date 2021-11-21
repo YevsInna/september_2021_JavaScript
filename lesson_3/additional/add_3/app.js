@@ -5,38 +5,38 @@
 // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
 
 let arr = [];
-let x = 0;
-for (let i =0; i<100; i++){
-      if ([i]%2===0){
-        arr.push([i])
-    }
-};
-console.log(arr);
-// let y = 1;
-// for (let i =0; i<50; i++){
-//     arr[i]=y;
-//     y+=2;
-//     console.log(arr[i]);
+// for (let i =0; i<100; i+=2){
+//       arr.push(i)
+//
 // };
-
-// for (let i = 0; i < 20; i++) {
-//     arr[i]= Math.round(Math.random()*100);
-//     }
 // console.log(arr);
+//
+// let arr2 =[];
+// for (let i =1; i<100; i+=2){
+//     arr2.push(i)
+//
+// };
+// console.log(arr2);
+
+
+for (let i = 0; i < 20; i++) {
+    arr[i]= Math.round(Math.random()*100);
+    }
+console.log(arr);
 
 
 // 2. Вивести за допомогою console.log кожен третій елемен
-// for (let i = 0; i < arr.length; i+=2) {
+// for (let i = 0; i < arr.length; i+=3) {
 //      console.log(arr[i]);
 //   }
 
 
 // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
-// for (let i = 0; i < arr.length; i+=2) {
-//     if (arr[i]%2===0){
-//         console.log(arr[i]);
-//     };
-// };
+for (let i = 0; i < arr.length; i+=3) {
+    if (arr[i]%2===0){
+        console.log(arr[i]);
+    };
+};
 
 
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
