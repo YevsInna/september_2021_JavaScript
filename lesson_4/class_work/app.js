@@ -25,7 +25,7 @@ numbersMax(67,3,80);
 
 
 // - створити функцію яка повертає найбільше число з масиву
-function maxOfArray([]){
+function maxOfArray(arr){
     let maxNumber = arr[0];
     for (const item of arr) {
         if (item>maxNumber){
@@ -41,7 +41,7 @@ console.log(maxNumberOfArray);
 
 
 // - створити функцію яка повертає найменьше число з масиву
-function minOfArray([]){
+function minOfArray(arr){
     let minNumber = arr[0];
     for (const item of arr) {
         if (item<minNumber){
@@ -57,7 +57,7 @@ console.log(minNumberOfArray);
 
 
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
-function sumOfArray([]){
+function sumOfArray(arr){
 let x = 0;
     for (let i = 0; i < arr.length; i++) {
         x += arr[i]
@@ -71,7 +71,7 @@ console.log(sum);
 
 
 // - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
-function averageOfArray([]){
+function averageOfArray(arr){
     let x = 0;
     for (let i = 0; i < arr.length; i++) {
         x += arr[i]
@@ -85,7 +85,7 @@ console.log(average);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше,
 // а виводить найбільше (Math використовувати заборонено);
-function minMax([]){
+function minMax(arr){
     let min = arr[0];
     let max = arr[0];
     for (const item of arr) {
@@ -132,7 +132,7 @@ randomLimitArray(10, 20);
 
 
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
-function reverseArr ([]){
+function reverseArr (arr){
     let reverseArray =[]
     for (let i = arr.length - 1; i >= 0; i--) {
         reverseArray.push(arr[i]);

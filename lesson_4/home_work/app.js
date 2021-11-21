@@ -23,9 +23,9 @@ console.log(cylinderArea1);
 
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
-function array ([]){
-    for (let i = 0; i < numbers.length; i++) {
-        console.log(numbers[i])
+function array (arr){
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
     }
 };
 let numbers = [1,3,78,56]
@@ -62,7 +62,7 @@ createList(3,'text')
 
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-function createListOfArray([]){
+function createListOfArray(arr){
     document.write(`<ul>`)
     for (let i = 0; i < arr.length; i++) {
         document.write(`<li>${arr[i]}</li>`);
