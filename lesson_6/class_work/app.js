@@ -89,9 +89,9 @@ console.log(filterDuration(coursesAndDurationArray));
 const cutString = (str,n)=>{
     const newArr = [];
     for (let i = 0; i < str.length; i++) {
-        str = str.slice(n)
         let cutString = str.substr(0, n)
         newArr.push(cutString);
+        str = str.slice(n)
     };
     return newArr;
 };
