@@ -109,19 +109,29 @@ let coursesArray = [
 const sortCourses = (arr)=>{
        for (const arrElement of arr) {
         for (const key in arrElement){
-            arr.sort((a,b)=>b.modules-a.modules)
-            // console.log(arrElement.modules)
-}
+           let sort = arr.sort((a,b)=>b.modules.length-a.modules.length)
+            return sort;
+        };
 
-};};
+       };
+
+};
 console.log(sortCourses(coursesArray));
-
 
 
 // - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
 //     let symb = "о", str = "Астрономия это наука о небесных объектах";
 // document.writeln(count(str, symb)) // 5
-//
+
+
+
+
 // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 //     let str = "Сила тяжести приложена к центру масс тела";
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
+const cutString2 =(str, n)=>{
+   let newStr = str.split(' ').slice(0,n).join(' ');
+   return newStr
+};
+let str = 'Сила тяжести приложена к центру масс тела';
+console.log(cutString2(str, 5))
