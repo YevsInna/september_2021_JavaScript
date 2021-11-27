@@ -122,9 +122,21 @@ console.log(sortCourses(coursesArray));
 // - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
 //     let symb = "о", str = "Астрономия это наука о небесных объектах";
 // document.writeln(count(str, symb)) // 5
+// ну тобто передаеш символ і воно повинно повертати кількість символів у цій строці
 
-
-
+const count = (str, stringsearch)=>{
+    let split = str.split('');
+    let arr = [];
+    for (let item of split) {
+      if (item = stringsearch){
+          arr.push(item)
+      };
+    };
+   return arr.length;
+};
+let symb = 'o'
+let str2 = 'Астрономия это наука о небесных объектах'
+console.log(count(str2, symb));
 
 // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 //     let str = "Сила тяжести приложена к центру масс тела";
