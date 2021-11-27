@@ -34,23 +34,21 @@
 //   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-//
-
-
-// let numbers = [9,8,0,4];
-// let index = 0;
+let numbers = [9,8,0,4];
+let index = 0;
 // index = 1;
 // index = 2;
-// const foo = (arr,i)=>{
-//     for (let j = 0; j < arr.length; j++) {
-//         if (j===i){
-//         arr[j]=arr[j+1];
-        // arr[j+1] = arr[j-1]???????????????????????????????????????????
-//         }
-//     }
-//     console.log(arr);
-// };
-// foo(numbers,index);
+const foo = (arr,i)=>{
+    for (let j = 0; j < arr.length; j++) {
+        if (j===i){
+            let item = arr[i];
+            arr[j]=arr[j+1];
+            arr[j+1] = item
+        }
+    }
+    console.log(arr);
+};
+foo(numbers,index);
 
 
 
