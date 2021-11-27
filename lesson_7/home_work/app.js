@@ -24,15 +24,11 @@ users.push(new User(1,'Inna', 'Yevsieienkova', 'evs@gmal.com', 380506789452),
 console.log(users);
 
 // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
-const filtrUsers = (arr)=>{
-    return arr.filter((value)=>value.id%2===0)
-}
-console.log(filtrUsers(users));
+const filterUsers = (arr)=>arr.filter((value)=> value.id%2===0)
+console.log(filterUsers(users));
 
 // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
-const sortUsers = (arr) => {
-  return arr.sort((a,b)=>a.id -b.id)
-};
+const sortUsers = (arr)=>arr.sort((a,b)=>a.id -b.id);
 console.log(sortUsers(users));
 
 // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
@@ -61,9 +57,7 @@ clients.push(new Client(1, 'Oleh', 'Tghjl', 'ahj@fgh.com', 380507459862, ['milk'
     );
 console.log(clients);
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
-const sortClients = (arr)=>{
-    return arr.sort((a,b)=>a.order.length-b.order.length)
-};
+const sortClients = (arr)=>arr.sort((a,b)=>a.order.length-b.order.length);
 console.log(sortClients(clients));
 
 
