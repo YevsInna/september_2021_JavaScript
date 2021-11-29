@@ -128,13 +128,13 @@ const count = (str, stringsearch)=>{
     let split = str.split('');
     let arr = [];
     for (let item of split) {
-      if (item = stringsearch){
+      if (item === stringsearch){
           arr.push(item)
       };
     };
    return arr.length;
 };
-let symb = 'o'
+let symb = 'о'
 let str2 = 'Астрономия это наука о небесных объектах'
 console.log(count(str2, symb));
 
