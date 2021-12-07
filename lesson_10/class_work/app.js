@@ -15,27 +15,44 @@
 // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
-// let input1 = document.createElement('input');
-// let input2 = document.createElement('input');
-// let input3 = document.createElement('input');
-// let btn = document.createElement('button');
-// btn.innerText = 'create table';
-// document.body.appendChild(input1);
-// document.body.appendChild(input2);
-// document.body.appendChild(input3);
-// document.body.appendChild(btn);
-// btn.addEventListener('click',  function () {
-//     let table = document.createElement('table');
-//     let tr = input1.value;
-//     let td = input2.value;
-//     let data = input3.value;
-//
-//     document.body.appendChild(table);
-//
-// }
-// );
+let input1 = document.createElement('input');
+let input2 = document.createElement('input');
+let input3 = document.createElement('input');
+let btn = document.createElement('button');
+btn.innerText = 'create table';
+document.body.appendChild(input1);
+document.body.appendChild(input2);
+document.body.appendChild(input3);
+document.body.appendChild(btn);
+btn.addEventListener('click',  function () {
+    let tr = input1.value;
+    let td = input2.value;
+    let data = input3.value;
 
-//
+    function createTable (tr,td,data){
+        let table = document.createElement('table');
+        let divTable = document.createElement('div');
+        table.style.border = 'solid 1px green';
+        divTable.appendChild(table);
+        document.body.appendChild(divTable);
+
+        for (let i = 0; i < tr; i++) {
+            let tr = document.createElement('tr');
+            tr.style.border = 'solid 1px black';
+            for (let j = 0; j < td; j++) {
+                let td = document.createElement('td');
+                td.style.border = 'solid 1px red';
+                td.innerText = `${data}`;
+                table.appendChild(tr);
+                tr.appendChild(td);
+
+            };
+        };
+    };
+    createTable(tr,td,data);
+
+});
+
 
 
 // - Сворити масив не цензцрних слів.
@@ -69,25 +86,24 @@
 //     Потрібно перевіряти чи не містить ціле речення в собі погані слова.
 //     Кинути алерт з попередженням у випадку якщо містить.
 //     Перевірку робити при натисканні на кнопку
-let badWords = ['бляха-муха', 'йопересете', 'шайзе'];
-
-let input = document.createElement('input');
-let btn = document.createElement('button');
-btn.innerText = 'submit';
-
-document.body.appendChild(input);
-document.body.appendChild(btn);
-
-btn.addEventListener('click', function (){
-    let sentence = input.value;
-    let string = sentence.split(' ');
-    for (const word of badWords) {
-        for (let item of string) {
-            if (item = word){
-                alert('тут не вживають нецензурну лексику!');
-            };
-        };
-return;
-    };
-});
-
+// let badWords = ['бляха-муха', 'йопересете', 'шайзе'];
+//
+// let input = document.createElement('input');
+// let btn = document.createElement('button');
+// btn.innerText = 'submit';
+//
+// document.body.appendChild(input);
+// document.body.appendChild(btn);
+//
+// btn.addEventListener('click', function (){
+//     let sentence = input.value;
+//     let string = sentence.split(' ');
+//     for (const word of badWords) {
+//         for (let item of string) {
+//             if (item = word){
+//                 alert('тут не вживають нецензурну лексику!');
+//             };
+//         };
+// return;
+//     };
+// });
