@@ -2,16 +2,16 @@
 // чтобы при клике на кнопку исчезал элемент с id="text".
 // let text = document.getElementById('text');
 // let btn = document.createElement('button');
-// btn.innerText = 'to make text invisible'
+// btn.innerText = 'to make text invisible';
 // document.body.appendChild(btn);
 //
 // btn.onclick = function (){
-//     text.style.display = 'none'
+//     text.style.display = 'none';
 // };
 
 //- Создайте кнопку, при клике на которую, она будет скрывать сама себя.
 // let btn2 = document.createElement('button');
-// btn2.innerText = 'press me'
+// btn2.innerText = 'press me';
 // document.body.appendChild(btn2);
 //
 // btn2.onclick = function (){
