@@ -31,10 +31,10 @@ btn.addEventListener('click',  function () {
 
     function createTable (tr,td,data){
         let table = document.createElement('table');
-        let divTable = document.createElement('div');
+        // let divTable = document.createElement('div');
         table.style.border = 'solid 1px green';
-        divTable.appendChild(table);
-        document.body.appendChild(divTable);
+        // divTable.appendChild(table);
+        document.body.appendChild(table);
 
         for (let i = 0; i < tr; i++) {
             let tr = document.createElement('tr');
