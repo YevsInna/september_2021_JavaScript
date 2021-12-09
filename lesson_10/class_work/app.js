@@ -73,7 +73,7 @@ btn.addEventListener('click',  function () {
 // btn.addEventListener('click', function (){
 //     let wordFromInput = input.value;
 //     for (const word of badWords) {
-//         if (wordFromInput === word){
+//         if (word === wordFromInput){
 //             alert('тут не вживають нецензурну лексику!');
 //         };
 //     };
@@ -86,24 +86,24 @@ btn.addEventListener('click',  function () {
 //     Потрібно перевіряти чи не містить ціле речення в собі погані слова.
 //     Кинути алерт з попередженням у випадку якщо містить.
 //     Перевірку робити при натисканні на кнопку
-// let badWords = ['бляха-муха', 'йопересете', 'шайзе'];
-//
-// let input = document.createElement('input');
-// let btn = document.createElement('button');
-// btn.innerText = 'submit';
-//
-// document.body.appendChild(input);
-// document.body.appendChild(btn);
-//
-// btn.addEventListener('click', function (){
-//     let sentence = input.value;
-//     let string = sentence.split(' ');
-//     for (const word of badWords) {
-//         for (let item of string) {
-//             if (item = word){
-//                 alert('тут не вживають нецензурну лексику!');
-//             };
-//         };
-// return;
-//     };
-// });
+let badWords = ['бляха-муха', 'йопересете', 'шайзе'];
+
+let input = document.createElement('input');
+let btn = document.createElement('button');
+btn.innerText = 'submit';
+
+document.body.appendChild(input);
+document.body.appendChild(btn);
+
+btn.addEventListener('click', function (){
+    let sentence = input.value;
+    let string = sentence.split(' ');
+    for (const word of badWords) {
+        for (let item of string) {
+            if (item === word){
+                alert('тут не вживають нецензурну лексику!');
+            };
+        };
+return;
+    };
+});
