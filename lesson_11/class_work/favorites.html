@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>favorites</title>
+</head>
+<body>
+<script>
+    let infoFromLocalStorage = JSON.parse(localStorage.getItem('favorites'));
+    for (const user of infoFromLocalStorage) {
+        let div = document.createElement('div');
+        div.innerText = `${user.name}, age - ${user.age}, status - ${user.status}`;
+        div.style.margin = '10px'
+        document.body.appendChild(div);
+    }
+</script>
+</body>
+</html>
