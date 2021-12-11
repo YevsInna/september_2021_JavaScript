@@ -1,0 +1,30 @@
+
+.wrap{
+    width: 100%;
+}
+.post{
+    background-color: #bda0a5;
+    padding: 8px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 8px;
+
+}
+button{
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+.comments{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+}
+.comment{
+    background-color: #f1cfcf;
+    padding: 8px;
+    border-radius: 10px;
+    color: #502f35;
+    margin-bottom: 8px;
+    width: 18%;
+}
