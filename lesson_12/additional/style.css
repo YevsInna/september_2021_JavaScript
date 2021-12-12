@@ -1,0 +1,30 @@
+.user{
+    background-color: #eee4b6;
+    margin-bottom: 4px;
+    border-bottom: solid 1px #ab9f6d;
+    padding: 10px;
+    border-radius: 8px;
+    color: #342c09;
+    width: 100%;
+}
+button{
+    border: none;
+    font-size: 14px;
+    background-color: #504927;
+    color: #f8eaab;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 8px 20px;
+}
+.post{
+    background-color: #f6e5bb;
+    margin-bottom: 4px;
+    padding: 10px;
+    border-radius: 8px;
+}
+.comment{
+    background-color: #f6ecd2;
+    margin-bottom: 4px;
+    padding: 10px;
+    border-radius: 8px;
+}
