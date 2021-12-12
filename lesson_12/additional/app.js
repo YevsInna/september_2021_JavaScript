@@ -23,52 +23,59 @@ fetch('https://jsonplaceholder.typicode.com/users')
        btnPosts.innerText = 'Show posts';
 
 
-       btnPosts.onclick = function (id){
-         fetch('https://jsonplaceholder.typicode.com/users/' + user.id + '/posts')
-         .then(value => value.json())
-         .then(posts =>{
-             for (const post of posts) {
-                 if (post.userId === user.id){
-                     let postDiv = document.createElement('div');
-                     postDiv.classList.add('post');
-                     postDiv.innerHTML = `<h3>Post # ${post.id}</h3>
+       btnPosts.addEventListener('click', function (id){
+           fetch('https://jsonplaceholder.typicode.com/users/' + user.id + '/posts')
+               .then(value => value.json())
+               .then(posts =>{
+                   for (const post of posts) {
+                       if (post.userId === user.id){
+                           let postDiv = document.createElement('div');
+                           postDiv.classList.add('post');
+                           postDiv.innerHTML = `<h3>Post # ${post.id}</h3>
                      <p>Post title: ${post.title}</p>
                      <p>${post.body}</p>`
 
-                     let btnComments = document.createElement('button');
-                     btnComments.innerText = 'Show comments'
+                           let btnComments = document.createElement('button');
+                           btnComments.innerText = 'Show comments'
 
-                     userDiv.appendChild(postDiv);
-                     postDiv.appendChild(btnComments);
+                           userDiv.appendChild(postDiv);
+                           postDiv.appendChild(btnComments);
 
-                     btnComments.onclick = function (id){
-                         fetch('https://jsonplaceholder.typicode.com/posts/' + post.id + '/comments')
-                         .then(value => value.json())
-                         .then(comments =>{
-                             for (const comment of comments) {
-                                 if (post.id === comment.postId){
-                                     let commentDiv = document.createElement('div');
-                                     commentDiv.classList.add('comment');
-                                     commentDiv.innerHTML = `<h4>Comment ${comment.id} to the post # ${comment.postId}</h4>
+                           btnComments.onclick = function (id){
+                               fetch('https://jsonplaceholder.typicode.com/posts/' + post.id + '/comments')
+                                   .then(value => value.json())
+                                   .then(comments =>{
+                                       for (const comment of comments) {
+                                           if (post.id === comment.postId){
+                                               let commentDiv = document.createElement('div');
+                                               commentDiv.classList.add('comment');
+                                               commentDiv.innerHTML = `<h4>Comment ${comment.id} to the post # ${comment.postId}</h4>
                                                              <p>${comment.name}</p>   
                                                              <p>Email: ${comment.email}</p> 
                                                              <p>${comment.body}</p> `
 
-                                     postDiv.appendChild(commentDiv);
-                                 }
-                             }
+                                               postDiv.appendChild(commentDiv);
+                                           }
+                                       }
 
-                         });
-                     }
+                                   });
+                           }
 
-                 }
-             }
-         });
+                       }
+                   }
+               });
 
-       };
+       });
 
+       btnPosts.addEventListener('click', function (){
+           let counter = 0;
+           counter ++;
+           if (!(counter%2)){
+               postDiv.hidden = false;
+           } else{postDiv.hidden = true}
+       })
 
-       wrap.appendChild(userDiv);
-       userDiv.appendChild(btnPosts);
+        wrap.appendChild(userDiv);
+        userDiv.appendChild(btnPosts);
     };
 });
