@@ -61,19 +61,24 @@ fetch('https://jsonplaceholder.typicode.com/users')
                                    });
                            }
 
+                           btnPosts.addEventListener('click', function (){
+                               // let counter = 0;
+                               // counter ++;
+                               // if (!(counter%2)){
+                               //     postDiv.hidden = false;
+                               // } else{postDiv.hidden = true}
+
+                               // postDiv.classList.toggle('hidden');
+
+                               // postDiv.style.display = 'none';
+                           })
                        }
                    }
                });
 
        });
 
-       btnPosts.addEventListener('click', function (){
-           let counter = 0;
-           counter ++;
-           if (!(counter%2)){
-               postDiv.hidden = false;
-           } else{postDiv.hidden = true}
-       })
+
 
         wrap.appendChild(userDiv);
         userDiv.appendChild(btnPosts);
